@@ -1,6 +1,6 @@
 package com.cy.linku.controllers;
 
-import com.cy.linku.reqParam.RegisterParam;
+import com.cy.linku.models.param.RegisterParam;
 import com.cy.linku.utils.Tool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 
 @RestController
-public class UserCenter {
-    private static Logger logger = LoggerFactory.getLogger(UserCenter.class);
+public class UserCenterController {
+    private static Logger logger = LoggerFactory.getLogger(UserCenterController.class);
     @PostMapping("/register")
     public HashMap<String, Object> register(@RequestBody RegisterParam registerParam) throws Exception {
         HashMap resultMap = Tool.getResultMap();

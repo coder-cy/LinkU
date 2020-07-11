@@ -1,4 +1,4 @@
-package com.cy.linku.reqParam;
+package com.cy.linku.models.param;
 
 public class RegisterParam {
     private String userAccount;

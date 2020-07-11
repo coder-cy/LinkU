@@ -1,14 +1,12 @@
-package com.cy.linku.reqParam;
+package com.cy.linku.models.param;
 
-public class LoginParam {
+public class ValidateAccountParam {
     private String userAccount;
-    private String userPwd;
 
     @Override
     public String toString() {
-        return "LoginParam{" +
+        return "ValidateAccountParam{" +
                 "userAccount='" + userAccount + '\'' +
-                ", userPwd='" + userPwd + '\'' +
                 '}';
     }
 
@@ -18,13 +16,5 @@ public class LoginParam {
 
     public void setUserAccount(String userAccount) {
         this.userAccount = userAccount;
-    }
-
-    public String getUserPwd() {
-        return userPwd;
-    }
-
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd;
     }
 }
