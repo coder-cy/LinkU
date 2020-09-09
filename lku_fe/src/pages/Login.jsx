@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { tab } from '../redux/actions'
 
+const test1 = ({text1, text2}) => wrappedComponent => {
+    wrappedComponent.prototype.text1 = text1;
+    wrappedComponent.prototype.text2 = text2;
 
-
-export default class Login extends Component {
+}
+@test1({
+    text1: 'hahha',
+    text2: 'lalala'
+})
+class Login extends Component {
     constructor(props) {
         super(props);
-        console.log(props)
         this.state = {};
     }
     render() {
@@ -18,7 +24,8 @@ export default class Login extends Component {
         )
     }
     componentDidMount() {
-
+        console.log(this.text1);
+        console.log(this.text2);
     }
 }
 
@@ -39,3 +46,5 @@ const mapDispatchToProps = dispatch => {
 };
 
 connect(mapStateToProps, mapDispatchToProps)(Login);
+
+export default Login
